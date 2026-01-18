@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbershop'S CUT - Barbershop Premium à Port-au-Prince</title>
+    <meta name="description" content="Barbershop'S CUT - Barbershop premium à Pétion-Ville. Coupe, barbe, design. Réservez en ligne en 2 clics. Excellence masculine.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<body>
+    <!-- ========== NAVIGATION ========== -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <h1>✂️ Barbershop'S CUT</h1>
+            <div class="nav-links">
+                <a href="#services">Services</a>
+                <a href="#about">À Propos</a>
+                <a href="#gallery">Galerie</a>
+                <a href="#testimonials">Témoignages</a>
+            </div>
+        </div>
+        <div class="nav-right">
+            <a href="admin.html" style="color: var(--primary-gold); text-decoration: none; font-weight: bold; margin-right: 15px;" title="Admin Panel">🔐</a>
+            <button id="booking-btn" onclick="ouvrirCartModal()" style="font-size: 0.9em;">🛒 Panier</button>
+            <span class="cart-badge" style="display: none;">0</span>
+        </div>
+    </nav>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Barbershop'S CUT</h2>
+            <p class="hero-subtitle">L'Excellence de la Coiffure Masculine</p>
+            <p style="color: white; font-size: 1.2em; margin-bottom: 30px;">Plus qu'une coupe, une expérience immersive et raffinée</p>
+            <button class="btn" onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'})">Découvrir nos services</button>
+        </div>
+    </section>
+
+    <!-- ========== SERVICES SECTION ========== -->
+    <section id="services" class="services container">
+        <h2>NOS PRESTATIONS</h2>
+        <p class="subtitle">L'Excellence au Masculin</p>
+        
+        <div class="services-grid">
+            <!-- Service 1 -->
+            <div class="service-card">
+                <img src="https://i.pinimg.com/originals/4d/10/4c/4d104c513a11f65376e5d950def388dc.jpg" alt="Coupe Classique" width="60%" height="40%">
+                <div class="service-content">
+                    <div class="service-icon">✂️</div>
+                    <h3>Coupe Classique</h3>
+                    <p>Coupe aux ciseaux ou tondeuse avec finitions impeccables et coiffage professionnel.</p>
+                    <div class="service-price">1500 HTG</div>
+                </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1654097803253-d481b6751f78?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb" alt="Taille de Barbe">
+                <div class="service-content">
+                    <div class="service-icon">⚡</div>
+                    <h3>Taille de Barbe</h3>
+                    <p>Sculptage précis de barbe, rasage des contours et soin hydratant spécialisé.</p>
+                    <div class="service-price">1000 HTG</div>
+                </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1608869776252-33ff061fabf2?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb" alt="Formule Complète">
+                <div class="service-content">
+                    <div class="service-icon">👑</div>
+                    <h3>Formule Complète</h3>
+                    <p>Coupe + Barbe + Soin du visage express pour un look impeccable.</p>
+                    <div class="service-price">3500 HTG</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="services-footer">
+            <button class="btn-outline" onclick="ouvrirAllServices()">Voir tous les tarifs</button>
+        </div>
+    </section>
+
+    <!-- ========== ABOUT SECTION ========== -->
+    <section id="about" class="container">
+        <div class="about">
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1723101917533-4fc9149c3684?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb" alt="Studio Djizz's Cut">
+            </div>
+            <div class="about-content">
+                <h3>Qui Sommes-Nous?</h3>
+                <p>DJIZZ'S CUT est plus qu'un simple barbershop. C'est un studio dédié à votre style, alliant techniques traditionnelles et tendances modernes pour vous offrir une expérience unique.</p>
+                <p>Chaque détail est soigné, chaque cliente est unique. Notre équipe de professionnels qualifiés vous garantit un service d'excellence dans une atmosphère raffinée et accueillante.</p>
+                
+                <h3 style="margin-top: 30px; color: var(--primary-gold);">Notre Engagement</h3>
+                <ul class="about-features">
+                    <li>Expertise reconnue depuis 2025</li>
+                    <li>Équipe qualifiée et à l'écoute</li>
+                    <li>Produits premium pour votre bien-être</li>
+                    <li>Ambiance immersive et raffinée</li>
+                    <li>Service réservation en ligne 24/7</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== GALLERY SECTION ========== -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2>GALERIE</h2>
+            <p class="subtitle">L'Atmosphère Djizz's Cut</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1599102991024-ed6032d5e7ee?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb" alt="Travaux barbershop">
+                    <div class="gallery-overlay"><span>✂️</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1747830280502-f33d7305a714?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb" alt="Studio intérieur">
+                    <div class="gallery-overlay"><span>🎨</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1759134248487-e8baaf31e33e?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb" alt="Barbe design">
+                    <div class="gallery-overlay"><span>💈</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1675516922615-4fc6a5c1d8fa?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb" alt="Coupe moderne">
+                    <div class="gallery-overlay"><span>✨</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1604368640692-027f44ffb8cf?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb" alt="Ambiance salon">
+                    <div class="gallery-overlay"><span>⭐</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1603899968034-1a56ca48d172?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb" alt="Détails finesse">
+                    <div class="gallery-overlay"><span>👑</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TESTIMONIALS SECTION ========== -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>TÉMOIGNAGES</h2>
+            <p class="subtitle">Ils nous font confiance</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Une expérience au top. L'équipe est pro et à l'écoute. Le salon est magnifique, on s'y sent tout de suite bien. Je recommande fortement!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.1.0&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200" alt="Thomas D.">
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">Thomas D.</div>
+                            <div class="testimonial-role">Client Fidèle</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Jamais déçu chez Djizz's Cut. Précision, style et bonne humeur. C'est mon rendez-vous mensuel incontournable. Service impeccable!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.1.0&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200" alt="Mehdi B.">
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">Mehdi B.</div>
+                            <div class="testimonial-role">Client Régulier</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Le meilleur barbier de la région! L'ambiance est incroyable et la coupe est toujours parfaite. Je recommande vivement à tous mes amis!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.1.0&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200" alt="Lucas M.">
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">Lucas M.</div>
+                            <div class="testimonial-role">Habitué</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h4>DJIZZ'S CUT</h4>
+                    <p>L'excellence de la coiffure masculine. Un studio dédié à votre style, alliant techniques traditionnelles et tendances modernes.</p>
+                </div>
+                <div>
+                    <h4>📞 Contact</h4>
+                    <p>
+                        <strong>Adresse:</strong> Pétion-Ville, Port-au-Prince, Haïti<br>
+                        <strong>Téléphone:</strong> +509 37 00 00 00<br>
+                        <strong>Email:</strong> contact@djizzscut.ht<br>
+                        <a href="https://instagram.com/" target="_blank" style="color: var(--primary-gold);">📸 Instagram</a>
+                    </p>
+                </div>
+                <div>
+                    <h4>⏰ Horaires</h4>
+                    <p>
+                        <strong>Lundi - Vendredi:</strong> 9h - 19h<br>
+                        <strong>Samedi:</strong> 9h - 20h<br>
+                        <strong>Dimanche:</strong> Sur rendez-vous<br>
+                        <br>
+                        ⚡ <strong>Réservation 24/7</strong> en ligne
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 DJIZZ'S CUT - Tous droits réservés. EST. 2025 • PORT-AU-PRINCE</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== FLOATING CART MODAL ========== -->
+    <div id="cart-modal-overlay" class="modal-overlay">
+        <div id="cart-modal" class="modal">
+            <div class="modal-header">
+                <h2>📋 Votre Réservation</h2>
+                <button class="close-modal" onclick="fermerCartModal()">✕</button>
+            </div>
+
+            <div class="cart-list"></div>
+
+            <div class="cart-summary"></div>
+
+            <div class="payment-section">
+                <h3>💳 Méthode de Paiement</h3>
+                <div class="payment-methods">
+                    <label class="payment-option selected">
+                        <div class="payment-option-icon">💻</div>
+                        <div>Paiement en ligne</div>
+                        <input type="radio" name="payment" value="online" checked onchange="selectionnerPaiement('online')">
+                    </label>
+                    <label class="payment-option">
+                        <div class="payment-option-icon">💵</div>
+                        <div>Cash à la réception</div>
+                        <input type="radio" name="payment" value="cash" onchange="selectionnerPaiement('cash')">
+                    </label>
+                </div>
+            </div>
+
+            <div class="important-message">
+                <strong>📞 Important:</strong> Après confirmation, vous recevrez un appel de notre équipe pour finaliser votre créneau horaire.
+            </div>
+
+            <div class="modal-actions">
+                <button class="btn-confirm" onclick="confirmerReservation()">✅ Confirmer la réservation</button>
+                <button class="btn-cancel" onclick="fermerCartModal()">❌ Annuler</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== ALL SERVICES MODAL ========== -->
+    <div id="services-modal-overlay" class="modal-overlay">
+        <div id="services-modal" class="modal services-modal">
+            <div class="modal-header">
+                <h2>📋 Tous nos Services</h2>
+                <button class="close-modal" onclick="fermerAllServices()">✕</button>
+            </div>
+
+            <div class="services-list">
+                <!-- SECTION COUPES -->
+                <div class="services-section-title">✂️ COUPES</div>
+                
+                <div class="service-item">
+                    <div class="service-item-icon">✂️</div>
+                    <div class="service-item-info">
+                        <h4>Coupe Homme</h4>
+                    </div>
+                    <div class="service-item-price">2500 HTG</div>
+                    <button class="service-item-btn" onclick="ajouter(1)">+</button>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-item-icon">👶</div>
+                    <div class="service-item-info">
+                        <h4>Coupe Enfant (0-12 ans)</h4>
+                    </div>
+                    <div class="service-item-price">1500 HTG</div>
+                    <button class="service-item-btn" onclick="ajouter(2)">+</button>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-item-icon">🧓</div>
+                    <div class="service-item-info">
+                        <h4>Coupe Senior</h4>
+                    </div>
+                    <div class="service-item-price">2000 HTG</div>
+                    <button class="service-item-btn" onclick="ajouter(3)">+</button>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-item-icon">🎨</div>
+                    <div class="service-item-info">
+                        <h4>Coupe avec Dégradé</h4>
+                    </div>
+                    <div class="service-item-price">3000 HTG</div>
+                    <button class="service-item-btn" onclick="ajouter(4)">+</button>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-item-icon">💎</div>
+                    <div class="service-item-info">
+                        <h4>Coupe Style (Moderne)</h4>
+                    </div>
+                    <div class="service-item-price">3500 HTG</div>
+                    <button class="service-item-btn" onclick="ajouter(5)">+</button>
+                </div>
+
+                <!-- SECTION BARBE -->
+                <div class="services-section-title">⚡ BARBE</div>
+                
+                <div class="service-item">
+                    <div class="service-item-icon">⚡</div>
+                    <div class="service-item-info">
+                        <h4>Taille de Barbe Simple</h4>
+                    </div>
+                    <div class="service-item-price">1500 HTG</div>
+                    <button class="service-item-btn" onclick="ajouter(6)">+</button>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-item-icon">✨</div>
+                    <div class="service-item-info">
+                        <h4>Rasage à l'ancienne</h4>
+                    </div>
+                    <div class="service-item-price">2000 HTG</div>
+                    <button class="service-item-btn" onclick="ajouter(7)">+</button>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-item-icon">💇</div>
+                    <div class="service-item-info">
+                        <h4>Design de Barbe</h4>
+                    </div>
+                    <div class="service-item-price">2500 HTG</div>
+                    <button class="service-item-btn" onclick="ajouter(8)">+</button>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-item-icon">👔</div>
+                    <div class="service-item-info">
+                        <h4>Taille Barbe Complète</h4>
+                    </div>
+                    <div class="service-item-price">2000 HTG</div>
+                    <button class="service-item-btn" onclick="ajouter(9)">+</button>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-item-icon">🧴</div>
+                    <div class="service-item-info">
+                        <h4>Soin Barbe (Huile + Lotion)</h4>
+                    </div>
+                    <div class="service-item-price">1500 HTG</div>
+                    <button class="service-item-btn" onclick="ajouter(10)">+</button>
+                </div>
+
+                <!-- SECTION SOINS -->
+                <div class="services-section-title">💆 SOINS</div>
+                
+                <div class="service-item">
+                    <div class="service-item-icon">💆</div>
+                    <div class="service-item-info">
+                        <h4>Soin Visage (Facial)</h4>
+                    </div>
+                    <div class="service-item-price">2500 HTG</div>
+                    <button class="service-item-btn" onclick="ajouter(11)">+</button>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-item-icon">🧖</div>
+                    <div class="service-item-info">
+                        <h4>Gommage Visage</h4>
+                    </div>
+                    <div class="service-item-price">1800 HTG</div>
+                    <button class="service-item-btn" onclick="ajouter(12)">+</button>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-item-icon">💆</div>
+                    <div class="service-item-info">
+                        <h4>Massage Visage & Cou</h4>
+                    </div>
+                    <div class="service-item-price">2000 HTG</div>
+                    <button class="service-item-btn" onclick="ajouter(13)">+</button>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-item-icon">🧴</div>
+                    <div class="service-item-info">
+                        <h4>Masque Purifiant</h4>
+                    </div>
+                    <div class="service-item-price">2000 HTG</div>
+                    <button class="service-item-btn" onclick="ajouter(14)">+</button>
+                </div>
+
+                <!-- SECTION COLORATIONS -->
+                <div class="services-section-title">🎨 COLORATIONS</div>
+                
+                <div class="service-item">
+                    <div class="service-item-icon">🎨</div>
+                    <div class="service-item-info">
+                        <h4>Coloration (Teinture)</h4>
+                    </div>
+                    <div class="service-item-price">3000 HTG</div>
+                    <button class="service-item-btn" onclick="ajouter(15)">+</button>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-item-icon">🧴</div>
+                    <div class="service-item-info">
+                        <h4>Coloration Barbe</h4>
+                    </div>
+                    <div class="service-item-price">2500 HTG</div>
+                    <button class="service-item-btn" onclick="ajouter(16)">+</button>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-item-icon">✨</div>
+                    <div class="service-item-info">
+                        <h4>Éclaircissement</h4>
+                    </div>
+                    <div class="service-item-price">3500 HTG</div>
+                    <button class="service-item-btn" onclick="ajouter(17)">+</button>
+                </div>
+
+                <!-- SECTION FORMULES -->
+                <div class="services-section-title">👑 FORMULES COMBINÉES</div>
+                
+                <div class="service-item">
+                    <div class="service-item-icon">👑</div>
+                    <div class="service-item-info">
+                        <h4>Formule Complète (Coupe + Barbe + Soin)</h4>
+                    </div>
+                    <div class="service-item-price">3500 HTG</div>
+                    <button class="service-item-btn" onclick="ajouter(18)">+</button>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-item-icon">💎</div>
+                    <div class="service-item-info">
+                        <h4>Formule Premium</h4>
+                        <small style="color: #888; font-size: 0.85em;">(Coupe + Design Barbe + Soin + Massage)</small>
+                    </div>
+                    <div class="service-item-price">4500 HTG</div>
+                    <button class="service-item-btn" onclick="ajouter(19)">+</button>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-item-icon">🪒</div>
+                    <div class="service-item-info">
+                        <h4>Formule Rasage</h4>
+                        <small style="color: #888; font-size: 0.85em;">(Rasage à l'ancienne + Soin Visage)</small>
+                    </div>
+                    <div class="service-item-price">3500 HTG</div>
+                    <button class="service-item-btn" onclick="ajouter(20)">+</button>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-item-icon">🌟</div>
+                    <div class="service-item-info">
+                        <h4>Forfait Homme Complet</h4>
+                        <small style="color: #888; font-size: 0.85em;">(Tous les services premium)</small>
+                    </div>
+                    <div class="service-item-price">5000 HTG</div>
+                    <button class="service-item-btn" onclick="ajouter(21)">+</button>
+                </div>
+
+                <!-- SECTION ÉPILATION -->
+                <div class="services-section-title">🧴 ÉPILATION</div>
+                
+                <div class="service-item">
+                    <div class="service-item-icon">🧴</div>
+                    <div class="service-item-info">
+                        <h4>Épilation Nez/Oreilles</h4>
+                    </div>
+                    <div class="service-item-price">1000 HTG</div>
+                    <button class="service-item-btn" onclick="ajouter(22)">+</button>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-item-icon">✂️</div>
+                    <div class="service-item-info">
+                        <h4>Threading Sourcils</h4>
+                    </div>
+                    <div class="service-item-price">1200 HTG</div>
+                    <button class="service-item-btn" onclick="ajouter(23)">+</button>
+                </div>
+
+                <!-- SECTION SERVICES SUPPLÉMENTAIRES -->
+                <div class="services-section-title">⭐ SERVICES SUPPLÉMENTAIRES</div>
+                
+                <div class="service-item">
+                    <div class="service-item-icon">🎨</div>
+                    <div class="service-item-info">
+                        <h4>Coupe + Teinture Cheveux</h4>
+                    </div>
+                    <div class="service-item-price">4000 HTG</div>
+                    <button class="service-item-btn" onclick="ajouter(24)">+</button>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-item-icon">💆</div>
+                    <div class="service-item-info">
+                        <h4>Soin Cheveux (Traitement)</h4>
+                    </div>
+                    <div class="service-item-price">2500 HTG</div>
+                    <button class="service-item-btn" onclick="ajouter(25)">+</button>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-item-icon">💇</div>
+                    <div class="service-item-info">
+                        <h4>Brushing/Coiffage</h4>
+                    </div>
+                    <div class="service-item-price">1500 HTG</div>
+                    <button class="service-item-btn" onclick="ajouter(26)">+</button>
+                </div>
+            </div>
+
+            <div class="services-modal-footer">
+                <p>✨ Tous nos services incluent une consultation personnalisée.</p>
+                <button class="btn" onclick="fermerAllServices(); ouvrirCartModal();">Réserver maintenant</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== FLOATING BUTTONS ========== -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/50937000000" target="_blank" class="btn-floating" id="whatsapp-btn" title="WhatsApp">
+            💬
+        </a>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
