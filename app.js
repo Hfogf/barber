@@ -6,6 +6,17 @@ let panier = JSON.parse(localStorage.getItem('djizz_panier')) || [];
 let selectedPayment = 'online';
 let services = []; // Sera chargé depuis localStorage ou valeurs par défaut
 
+// ========== MENU MOBILE ========== 
+function toggleMobileMenu() {
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+    const hamburger = document.getElementById('hamburger-menu');
+    
+    mobileMenu.classList.toggle('active');
+    mobileMenuOverlay.classList.toggle('active');
+    hamburger.classList.toggle('active');
+}
+
 // ========== CHARGER SERVICES (localStorage ou défaut) ==========
 function chargerServices() {
     const servicesStockage = JSON.parse(localStorage.getItem('djizz_services'));

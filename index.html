@@ -13,19 +13,31 @@
     <nav class="navbar">
         <div class="nav-left">
             <h1>✂️ Barbershop'S CUT</h1>
-            <div class="nav-links">
-                <a href="#services">Services</a>
-                <a href="#about">À Propos</a>
-                <a href="#gallery">Galerie</a>
-                <a href="#testimonials">Témoignages</a>
-            </div>
         </div>
         <div class="nav-right">
-            <a href="admin.html" style="color: var(--primary-gold); text-decoration: none; font-weight: bold; margin-right: 15px;" title="Admin Panel">🔐</a>
+            <button class="hamburger" id="hamburger-menu" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <a href="admin.html" class="admin-link" style="color: var(--primary-gold); text-decoration: none; font-weight: bold;" title="Admin Panel">🔐</a>
             <button id="booking-btn" onclick="ouvrirCartModal()" style="font-size: 0.9em;">🛒 Panier</button>
             <span class="cart-badge" style="display: none;">0</span>
         </div>
     </nav>
+
+    <!-- ========== MOBILE MENU SIDEBAR ========== -->
+    <div id="mobile-menu" class="mobile-menu">
+        <div class="mobile-menu-content">
+            <div class="mobile-nav-links">
+                <a href="#services" onclick="toggleMobileMenu()">Services</a>
+                <a href="#about" onclick="toggleMobileMenu()">À Propos</a>
+                <a href="#gallery" onclick="toggleMobileMenu()">Galerie</a>
+                <a href="#testimonials" onclick="toggleMobileMenu()">Témoignages</a>
+            </div>
+        </div>
+    </div>
+    <div id="mobile-menu-overlay" class="mobile-menu-overlay" onclick="toggleMobileMenu()"></div>
 
     <!-- ========== HERO SECTION ========== -->
     <section class="hero">
